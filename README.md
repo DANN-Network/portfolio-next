@@ -231,9 +231,7 @@ If you like this portfolio, please give it a star! It helps others discover it.
 
 If you want to support development:
 
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/dann)
-[![Ko-fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/dann)
-[![GitHub Sponsors](https://img.shields.io/badge/GitHub_Sponsors-EA4AAA?style=for-the-badge&logo=github-sponsors&logoColor=white)](https://github.com/sponsors/DANN-Network)
+[![Donate](https://files.catbox.moe/71kraj.jpeg)](https://files.catbox.moe/71kraj.jpeg)
 
 ---
 
