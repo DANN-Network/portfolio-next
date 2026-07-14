@@ -58,28 +58,28 @@ export default function Contact() {
           ${headingVis ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <form onSubmit={submit} className="md:col-span-3 space-y-4">
             <div>
-              <label className="block text-xs text-zinc-500 mb-1.5 font-[family-name:var(--font-mono)] tracking-wide">
-                &gt; Name_
+              <label className="block text-sm text-zinc-400 mb-2 font-medium">
+                Your Name
               </label>
               <input value={name} onChange={e => setName(e.target.value)}
                 className="w-full px-4 py-3 glass-card rounded-xl text-sm text-white
                   outline-none transition-all focus:border-indigo-500/50 focus:shadow-lg focus:shadow-indigo-500/5
                   placeholder-zinc-600"
-                placeholder="Your name" />
+                placeholder="John Doe" />
             </div>
             <div>
-              <label className="block text-xs text-zinc-500 mb-1.5 font-[family-name:var(--font-mono)] tracking-wide">
-                &gt; Email_
+              <label className="block text-sm text-zinc-400 mb-2 font-medium">
+                Your Email
               </label>
               <input type="email" value={email} onChange={e => setEmail(e.target.value)}
                 className="w-full px-4 py-3 glass-card rounded-xl text-sm text-white
                   outline-none transition-all focus:border-indigo-500/50 focus:shadow-lg focus:shadow-indigo-500/5
                   placeholder-zinc-600"
-                placeholder="your@email.com" />
+                placeholder="john@example.com" />
             </div>
             <div>
-              <label className="block text-xs text-zinc-500 mb-1.5 font-[family-name:var(--font-mono)] tracking-wide">
-                &gt; Message_
+              <label className="block text-sm text-zinc-400 mb-2 font-medium">
+                Your Message
               </label>
               <textarea value={msg} onChange={e => setMsg(e.target.value)} rows={4}
                 className="w-full px-4 py-3 glass-card rounded-xl text-sm text-white

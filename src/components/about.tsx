@@ -48,8 +48,8 @@ export default function About() {
       <div className="section-inner">
         <div
           className={`transition-all duration-700 ${vis ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <p className="text-indigo-400 font-[family-name:var(--font-mono)] text-xs tracking-[0.15em] uppercase mb-2">
-            &mdash; About
+          <p className="text-indigo-400 text-sm font-medium mb-3">
+            About Me
           </p>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white mb-6">
             Who I <span className="gradient-text-vibrant">am</span>

@@ -31,9 +31,9 @@ function SkillBar({ name, icon, desc, level, i, visible }: {
         </div>
         <div className="min-w-0">
           <span className="text-sm text-white font-medium block leading-tight group-hover:text-indigo-300 transition-colors">{name}</span>
-          <span className="text-[0.55rem] text-zinc-500 tracking-wide uppercase">{desc}</span>
+          <span className="text-[0.6rem] text-zinc-500 tracking-wider">{desc}</span>
         </div>
-        <span className="ml-auto text-xs text-indigo-300 font-[family-name:var(--font-mono)] group-hover:scale-110 transition-transform">{level}%</span>
+        <span className="ml-auto text-sm text-indigo-400 font-semibold group-hover:scale-110 transition-transform">{level}%</span>
       </div>
       <div className="h-1.5 rounded-full bg-white/5 overflow-hidden">
         <div
@@ -81,14 +81,14 @@ export default function Skills() {
       <div className="section-inner relative">
         <div
           className={`transition-all duration-700 ${vis ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <p className="text-indigo-400 font-[family-name:var(--font-mono)] text-xs tracking-[0.15em] uppercase mb-2">
-            &mdash; Skills
+          <p className="text-indigo-400 text-sm font-medium mb-3">
+            My Skills
           </p>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white mb-4">
-            My <span className="gradient-text-vibrant">toolkit</span>
+            Technical <span className="gradient-text-vibrant">expertise</span>
           </h2>
           <p className="text-zinc-500 max-w-xl mb-8 leading-relaxed">
-            Technologies I use daily to build and ship products.
+            Technologies and tools I use to build modern web applications.
           </p>
         </div>
 

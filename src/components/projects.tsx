@@ -53,8 +53,8 @@ function Card({ title, desc, tags, github, live, i }: {
         {/* Hover overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#030014]/80 via-transparent to-transparent
           opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-          <span className="text-xs text-white/60 font-[family-name:var(--font-mono)]">
-            Click links below
+          <span className="text-xs text-white/70 font-medium">
+            View project details
           </span>
         </div>
       </div>
@@ -68,22 +68,20 @@ function Card({ title, desc, tags, github, live, i }: {
         <div className="flex flex-wrap gap-1.5 mb-4">
           {tags.map(t => (
             <span key={t}
-              className="text-[0.5rem] text-indigo-300 bg-indigo-500/10 px-2 py-0.5 rounded-full
-                font-[family-name:var(--font-mono)] tracking-wide uppercase">{t}</span>
+              className="text-[0.65rem] text-indigo-200 bg-gradient-to-r from-indigo-500/15 to-purple-500/15 px-3 py-1 rounded-full
+                font-medium tracking-wide border border-indigo-400/20 hover:border-indigo-400/40 transition-colors">{t}</span>
           ))}
         </div>
         <div className="flex gap-3 pt-3 border-t border-white/5">
           <a href={github} target="_blank" rel="noreferrer"
             className="text-xs text-zinc-500 no-underline transition-all hover:text-indigo-400
-              inline-flex items-center gap-1.5 font-[family-name:var(--font-mono)] group/link
-              hover:scale-105">
+              inline-flex items-center gap-1.5 group/link hover:scale-105">
             <i className="fa-brands fa-github group-hover/link:rotate-12 transition-transform" /> Source
             <span className="inline-block transition-transform duration-200 group-hover/link:translate-x-0.5">&rarr;</span>
           </a>
           <a href={live} target="_blank" rel="noreferrer"
             className="text-xs text-zinc-500 no-underline transition-all hover:text-emerald-400
-              inline-flex items-center gap-1.5 font-[family-name:var(--font-mono)] group/link
-              hover:scale-105">
+              inline-flex items-center gap-1.5 group/link hover:scale-105">
             <i className="fa-solid fa-arrow-up-right-from-square group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" /> Demo
             <span className="inline-block transition-transform duration-200 group-hover/link:translate-x-0.5">&rarr;</span>
           </a>
