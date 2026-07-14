@@ -33,6 +33,7 @@ function Card({ title, desc, tags, github, live, i }: {
   return (
     <div ref={ref}
       className={`group glass-card rounded-2xl overflow-hidden transition-all duration-500 cursor-default
+        hover:-translate-y-2 hover:shadow-2xl hover:shadow-indigo-500/20
         ${vis ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
       style={{ transitionDelay: `${i * 80}ms` }}>
       {/* Thumbnail */}
@@ -73,15 +74,17 @@ function Card({ title, desc, tags, github, live, i }: {
         </div>
         <div className="flex gap-3 pt-3 border-t border-white/5">
           <a href={github} target="_blank" rel="noreferrer"
-            className="text-xs text-zinc-500 no-underline transition-colors hover:text-white
-              inline-flex items-center gap-1.5 font-[family-name:var(--font-mono)] group/link">
-            <i className="fa-brands fa-github" /> Source
+            className="text-xs text-zinc-500 no-underline transition-all hover:text-indigo-400
+              inline-flex items-center gap-1.5 font-[family-name:var(--font-mono)] group/link
+              hover:scale-105">
+            <i className="fa-brands fa-github group-hover/link:rotate-12 transition-transform" /> Source
             <span className="inline-block transition-transform duration-200 group-hover/link:translate-x-0.5">&rarr;</span>
           </a>
           <a href={live} target="_blank" rel="noreferrer"
-            className="text-xs text-zinc-500 no-underline transition-colors hover:text-white
-              inline-flex items-center gap-1.5 font-[family-name:var(--font-mono)] group/link">
-            <i className="fa-solid fa-arrow-up-right-from-square" /> Live
+            className="text-xs text-zinc-500 no-underline transition-all hover:text-emerald-400
+              inline-flex items-center gap-1.5 font-[family-name:var(--font-mono)] group/link
+              hover:scale-105">
+            <i className="fa-solid fa-arrow-up-right-from-square group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" /> Demo
             <span className="inline-block transition-transform duration-200 group-hover/link:translate-x-0.5">&rarr;</span>
           </a>
         </div>

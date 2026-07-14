@@ -59,20 +59,20 @@ export default function About() {
         <div ref={ref} className={`grid md:grid-cols-5 gap-10 items-start transition-all duration-700
           ${vis ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="md:col-span-2 flex justify-center md:justify-start">
-            <div className="relative">
+            <div className="relative group/avatar">
               <div className="w-48 h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden glass-vibrant
-                flex items-center justify-center group">
+                flex items-center justify-center group-hover/avatar:scale-105 transition-transform duration-500">
                 <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-purple-500/10" />
                 {aboutImage ? (
-                  <img src={aboutImage} alt="Profile" className="w-full h-full object-cover" />
+                  <img src={aboutImage} alt="Profile" className="w-full h-full object-cover group-hover/avatar:scale-110 transition-transform duration-500" />
                 ) : (
-                  <i className="fa-solid fa-user text-6xl text-indigo-300/40 group-hover:text-indigo-300/60 transition-all duration-300" />
+                  <i className="fa-solid fa-user text-6xl text-indigo-300/40 group-hover/avatar:text-indigo-300/60 transition-all duration-300" />
                 )}
-                <div className="absolute inset-0 border border-indigo-500/10 rounded-2xl" />
+                <div className="absolute inset-0 border border-indigo-500/10 rounded-2xl group-hover/avatar:border-indigo-500/30 transition-colors" />
               </div>
-              <div className="absolute -inset-2 rounded-2xl border border-indigo-500/10 animate-pulse-ring opacity-0" />
+              <div className="absolute -inset-2 rounded-2xl border border-indigo-500/10 animate-pulse-ring opacity-0 group-hover/avatar:opacity-100 transition-opacity" />
               <div className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-emerald-500 border-2 border-[#030014]
-                flex items-center justify-center">
+                flex items-center justify-center group-hover/avatar:scale-110 transition-transform">
                 <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
               </div>
             </div>

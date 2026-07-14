@@ -22,24 +22,26 @@ function SkillBar({ name, icon, desc, level, i, visible }: {
 }) {
   return (
     <div
-      className={`glass-card rounded-xl p-4 transition-all duration-500
+      className={`glass-card rounded-xl p-4 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-500/10 group
         ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
       style={{ transitionDelay: `${i * 40}ms` }}>
       <div className="flex items-center gap-3 mb-3">
-        <div className="w-9 h-9 rounded-lg bg-indigo-500/10 flex items-center justify-center shrink-0">
-          <i className={`${icon} text-sm text-indigo-300`} />
+        <div className="w-9 h-9 rounded-lg bg-indigo-500/10 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-indigo-500/20 transition-all duration-300">
+          <i className={`${icon} text-sm text-indigo-300 group-hover:text-indigo-200 transition-colors`} />
         </div>
         <div className="min-w-0">
-          <span className="text-sm text-white font-medium block leading-tight">{name}</span>
+          <span className="text-sm text-white font-medium block leading-tight group-hover:text-indigo-300 transition-colors">{name}</span>
           <span className="text-[0.55rem] text-zinc-500 tracking-wide uppercase">{desc}</span>
         </div>
-        <span className="ml-auto text-xs text-indigo-300 font-[family-name:var(--font-mono)]">{level}%</span>
+        <span className="ml-auto text-xs text-indigo-300 font-[family-name:var(--font-mono)] group-hover:scale-110 transition-transform">{level}%</span>
       </div>
       <div className="h-1.5 rounded-full bg-white/5 overflow-hidden">
         <div
-          className="h-full rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 transition-all duration-1000 ease-out"
-          style={{ width: visible ? `${level}%` : '0%', transitionDelay: `${i * 60 + 300}ms` }}
-        />
+          className="h-full rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 transition-all duration-1000 ease-out relative overflow-hidden"
+          style={{ width: visible ? `${level}%` : '0%', transitionDelay: `${i * 60 + 300}ms` }}>
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer" 
+            style={{ animation: 'shimmer 2s infinite' }} />
+        </div>
       </div>
     </div>
   )

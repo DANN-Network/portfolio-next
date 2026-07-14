@@ -88,10 +88,10 @@ export default function Contact() {
             </div>
             <button type="submit"
               className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl
-                bg-indigo-600 text-white text-sm font-medium cursor-pointer transition-all
-                hover:bg-indigo-500 hover:-translate-y-0.5 active:translate-y-0
-                shadow-lg shadow-indigo-600/20 hover:shadow-indigo-500/30">
-              <i className="fa-solid fa-paper-plane" /> Send
+                bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-sm font-medium cursor-pointer transition-all
+                hover:from-indigo-500 hover:to-purple-500 hover:-translate-y-0.5 hover:shadow-2xl hover:shadow-indigo-500/30 active:translate-y-0
+                shadow-lg shadow-indigo-600/20 group/btn">
+              <i className="fa-solid fa-paper-plane group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" /> Send Message
             </button>
             {status && (
               <p className={`text-sm font-[family-name:var(--font-mono)] transition-all duration-300
